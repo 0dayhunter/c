@@ -1,8 +1,8 @@
 # c#
 
 # program 1::
-..
 
+```
 using System;
 public class Arthematic
 {
@@ -21,7 +21,7 @@ System.Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1 % num2);
 }
 }
 
-..
+```
 
 ouput ::
 Enter a First Number: 
@@ -38,6 +38,7 @@ Enter a Second Number:
 
 # program 2 ::
 
+```
 using System;
 public class Armstrong
 {
@@ -57,6 +58,7 @@ System.Console.WriteLine("{0}", i);
 }
 }
 }
+```
 
 output::
 1
@@ -70,6 +72,8 @@ output::
 
 
 # program 3::
+
+```
 using System;
 public class Substrings
 {
@@ -93,6 +97,7 @@ input_string = System.Console.ReadLine();
 find_substrings(input_string);
 }
 }
+```
 
 output ::
 Enter a String :
@@ -113,6 +118,7 @@ ello
 
 # program 4::
 
+```
 using System;
 
 class Program
@@ -122,6 +128,7 @@ class Program
         DivisionByZeroExceptionExample();
         IndexOutOfRangeExceptionExample();
     }
+    
 
     static void DivisionByZeroExceptionExample()
     {
@@ -157,6 +164,7 @@ class Program
     }
 }
 
+```
 output ::
 
 Enter numerator: 10
@@ -176,6 +184,7 @@ Index Out of Range Exception: Index was outside the bounds of the array.
 
 # program 5::
 
+```
 using System;class Program
 {
 static void Main()
@@ -199,7 +208,7 @@ Console.Write("*   ");
 }
 }
 }
-
+```
 output ::
 Enter the number of rows for Pascal's Triangle: 5
 Pascal's Triangle:
@@ -211,8 +220,9 @@ Pascal's Triangle:
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 # program 6::
+
+```
 using System;namespace FloydTriangle
 {
 class Program
@@ -232,7 +242,7 @@ Console.WriteLine("");
 }
 }
 }
-
+```
 output::
 Enter the number of rows: 5
 
@@ -245,7 +255,7 @@ Enter the number of rows: 5
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # program 7::
-
+```
 using System;
 using System.IO;
 class Program
@@ -282,10 +292,10 @@ class Program
         }
     }
 }
-
+```
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 # program 8::
-
+```
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -413,7 +423,7 @@ System.Console.WriteLine("Item {0}: {1}", (i + 1), item[i]);
 }
 }
 }
-
+```
 output ::
 Stack MENU(size -- 10)
 1. Add an element
@@ -465,7 +475,7 @@ Select your choice: 5
 
 
 # program 9::
-
+```
 using System;
 public struct Complex
 {
@@ -498,8 +508,11 @@ System.Console.WriteLine("Result (Sum): {0}", res);
 System.Console.ReadLine();
 }
 }
+```
+////////////////////////////////////////////////////////////////////////////////////////
 
 # program 9::
+```
 using System;
 public struct Complex
 {
@@ -532,7 +545,7 @@ System.Console.WriteLine("Result (Sum): {0}", res);
 System.Console.ReadLine();
 }
 }
-
+```
 output::
 First: 1 + 4i
 Second: 2 + 1i
@@ -542,6 +555,7 @@ Result (Sum): 3 + 5i
 
 
 # program 10:;
+```
 using System;
 public class Shape
 {
@@ -601,6 +615,7 @@ shape.draw(); shape.erase();
 }
 }
 }
+```
 
 output::
 Drawing Circle
@@ -615,6 +630,7 @@ Erasing Square
 
 
 # program 11:;
+```
 using System;
 
 public abstract class Shape
@@ -658,7 +674,7 @@ public class ShapeClient
     }
 }
 
-
+```
 output  ::
 Triangle:
 Area: 55
@@ -673,7 +689,7 @@ Perimeter: 37.6991118430775
 
 
 # program 12::
-
+```
 using System;
 
 public abstract class Shape
@@ -716,7 +732,7 @@ public class ShapeClient
         Console.WriteLine($"\nCircle:\nRadius: {radius}\nArea: {circle.GetArea()}\nPerimeter: {circle.GetPerimeter()}");
     }
 }
-
+```
 output::
 Triangle:
 Width: 10
