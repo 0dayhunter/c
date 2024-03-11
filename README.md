@@ -1,6 +1,7 @@
 # c#
 
 # program 1::
+..
 
 using System;
 public class Arthematic
@@ -19,6 +20,8 @@ System.Console.WriteLine("{0} / {1} = {2}", num1, num2, num1 / num2);
 System.Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1 % num2);
 }
 }
+
+..
 
 ouput ::
 Enter a First Number: 
