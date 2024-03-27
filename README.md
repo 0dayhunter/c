@@ -690,59 +690,73 @@ Perimeter: 37.6991118430775
 # program 12::
 ```
 using System;
-
-public abstract class Shape
+// Resizable Interface
+public interface IResizable
 {
-    public abstract double GetPerimeter();
-    public abstract double GetArea();
+    void ResizeWidth(int width);
+    void ResizeHeight(int height);
 }
-
-public class Circle : Shape
+// Rectangle Class implementing the Resizable interface
+public class Rectangle : IResizable
 {
-    private double radius;
-    private const double Pi = Math.PI;
-
-    public Circle(double radius = 1) => this.radius = radius;
-
-    public override double GetArea() => Pi * radius * radius;
-    public override double GetPerimeter() => 2 * Pi * radius;
-}
-
-public class Triangle : Shape
-{
-    private double width, height;
-
-    public Triangle(double width = 1, double height = 1) => (this.width, this.height) = (width, height);
-
-    public override double GetArea() => width * height / 2;
-    public override double GetPerimeter() => width + height + Math.Sqrt(width * width + height * height);
-}
-
-public class ShapeClient
-{
-    public static void Main(string[] args)
+    private int width;
+    private int height;
+    // Constructor
+    public Rectangle(int initialWidth, int initialHeight)
     {
-        double width = 10, length = 11;                                                                                                           change values in this line
-        Shape triangle = new Triangle(width, length);
-        Console.WriteLine($"Triangle:\nWidth: {width}\nHeight: {length}\nArea: {triangle.GetArea()}\nPerimeter: {triangle.GetPerimeter()}");
+        width = initialWidth;
+        height = initialHeight;
+    }
+    // Implementing methods from the Resizable interface
+    public void ResizeWidth(int newWidth)
+    {
+        width = newWidth;
+        Console.WriteLine($"Width resized to: {width}");
+    }
+    public void ResizeHeight(int newHeight)
+    {
+        height = newHeight;
+        Console.WriteLine($"Height resized to: {height}");
+    }
 
-        double radius = 7;																	change values in this line
-        Shape circle = new Circle(radius);
-        Console.WriteLine($"\nCircle:\nRadius: {radius}\nArea: {circle.GetArea()}\nPerimeter: {circle.GetPerimeter()}");
+    // Additional method to display rectangle information
+    public void DisplayRectangleInfo()
+    {
+        Console.WriteLine($"Rectangle Width: {width}, Height: {height}");
     }
 }
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creating a Rectangle object
+        Rectangle myRectangle = new Rectangle(5, 10);
+        // Displaying initial rectangle information
+        Console.WriteLine("Initial Rectangle:");
+        myRectangle.DisplayRectangleInfo();
+        // Resizing width and height
+        myRectangle.ResizeWidth(8);
+        myRectangle.ResizeHeight(15);  
+        // Displaying updated rectangle information 
+        Console.WriteLine("\nUpdated Rectangle:");
+        myRectangle.DisplayRectangleInfo(); 
+        Console.ReadLine(); // To keep the console window open
+    }
+}
+
+  
 ```
 output::
-Triangle:
-Width: 10
-Height: 11
-Area: 55
-Perimeter: 35.8660687473185
 
-Circle:
-Radius: 7
-Area: 153.9380400259
-Perimeter: 43.9822971502571
+Initial Rectangle:
+Rectangle Width: 5
+Height: 10
+//////////////////////////
+Width resized to: 8
+Height resized to: 15
+//////////////////////////
+Updated Rectangle:
+Rectangle Width: 8, Height: 15
 
 
 
