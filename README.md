@@ -184,73 +184,76 @@ Index Out of Range Exception: Index was outside the bounds of the array.
 # program 5::
 
 ```
-using System;class Program
+using System;
+
+class Program
 {
-static void Main()
-{
-Console.Write("Enter the number of rows for Pascal's Triangle: ");
-int numRows = int.Parse(Console.ReadLine());
-Console.Write("Pascal's Triangle:\n");
-PrintPascalsTriangle(numRows);
+    static void Main(string[] args)
+    {
+        int rows = 5; // Number of rows in Pascal's triangle
+
+        for (int i = 0; i < rows; i++)
+        {
+            int number = 1;
+            Console.Write(new string(' ', (rows - i) * 2));
+            for (int j = 0; j <= i; j++)
+            {
+                Console.Write("{0,3} ", number);
+                number = number * (i - j) / (j + 1);
+            }
+            Console.WriteLine();
+        }
+    }
 }
-static void PrintPascalsTriangle(int numRows)
-{
-for (int i = 0; i < numRows; i++)
-{
-for (int j = 0; j < numRows - i - 1; j++)
-{
-Console.Write("  ");
-}for (int j = 0; j <= i; j++)
-{
-Console.Write("*   ");
-}Console.WriteLine();
-}
-}
-}
+
 ```
 output ::
 Enter the number of rows for Pascal's Triangle: 5
 Pascal's Triangle:
-        *   
-      *   *   
-    *   *   *   
-  *   *   *   *   
-*   *   *   *   *   
+ ``
+            1 
+          1   1 
+        1   2   1 
+      1   3   3   1 
+    1   4   6   4   1 
+``
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # program 6::
 
 ```
-using System;namespace FloydTriangle
-{
+using System;
+
 class Program
 {
-static void Main(string[] args)
-{
-int row, i, j, num = 1;Console.Write("Enter the number of rows: ");
-row = Convert.ToInt32(Console.ReadLine());Console.WriteLine("");for (i = 1; i <= row; i++)
-{
-for (j = 1; j <= i; j++)
-{
-Console.Write(num + " ");
-num++;
+    static void Main(string[] args)
+    {
+        int rows = 5; // Number of rows in Floyd's triangle
+        int number = 1;
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write(number + " ");
+                number++;
+            }
+            Console.WriteLine();
+        }
+    }
 }
-Console.WriteLine("");
-}Console.ReadKey();
-}
-}
-}
+
 ```
 output::
 Enter the number of rows: 5
-
+``
 1 
 2 3 
 4 5 6 
 7 8 9 10 
 11 12 13 14 15 
-
+``
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 # program 7::
